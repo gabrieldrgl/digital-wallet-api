@@ -45,3 +45,13 @@ group :development do
   # gem "spring"
 end
 
+
+gem "bcrypt", "~> 3.1"
+
+gem "jwt", "~> 2.8"
+
+gem "jsonapi-rb", "~> 0.5.0"
+
+gem "jsonapi-rails", "~> 0.4.1"
+
+gem "jsonapi-serializer", "~> 2.2"
