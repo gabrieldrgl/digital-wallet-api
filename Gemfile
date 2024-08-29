@@ -55,3 +55,7 @@ gem "jsonapi-rb", "~> 0.5.0"
 gem "jsonapi-rails", "~> 0.4.1"
 
 gem "jsonapi-serializer", "~> 2.2"
+
+gem "ransack", "~> 4.2"
+
+gem "kaminari", "~> 1.2"

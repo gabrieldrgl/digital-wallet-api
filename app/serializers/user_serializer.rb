@@ -1,7 +1,7 @@
 class UserSerializer < JSONAPI::Serializable::Resource
-  type "User"
+  type "users"
 
-  attributes :name, :email
+  attributes :name, :email, :balance
 
   meta do
     { token: @token } if @token

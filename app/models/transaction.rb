@@ -6,6 +6,11 @@ class Transaction < ApplicationRecord
   validates :amount, presence: true, numericality: { greater_than: 0 }
   validate :sufficient_balance, if: :withdrawal?
 
+  def self.ransackable_attributes(auth_object = nil)
+    ["created_at", "transaction_type"]
+  end
+
+
   private
 
   def sufficient_balance

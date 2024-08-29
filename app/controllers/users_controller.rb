@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  skip_before_action :authorized, only: [:create]
   rescue_from ActiveRecord::RecordInvalid, with: :handle_invalid_record
 
   def create
@@ -8,6 +9,12 @@ class UsersController < ApplicationController
     render jsonapi: user, class: {
       User: UserSerializer
     }, meta: { token: @token }, status: :created
+  end
+
+  def balance
+    render jsonapi: current_user, fields: { users: [:balance] }, class: {
+      User: UserSerializer
+    }, status: :ok
   end
 
   private
