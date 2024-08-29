@@ -59,3 +59,11 @@ gem "jsonapi-serializer", "~> 2.2"
 gem "ransack", "~> 4.2"
 
 gem "kaminari", "~> 1.2"
+
+gem "rspec-rails", "~> 6.1"
+
+gem "factory_bot_rails", "~> 6.4"
+
+gem "faker", "~> 3.4"
+
+gem "shoulda-matchers", "~> 6.4"
